@@ -24,16 +24,16 @@ enum layer_names {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[_BASE] = LAYOUT(
-		         KC_Q,       KC_C,           KC_L,           KC_M,       KC_K,                                               KC_B,          KC_F,          KC_U,  KC_COMM,   KC_SCLN,
-		         KC_I,       KC_S,           KC_R,           KC_T,       KC_G,                                               KC_P,          KC_N,          KC_E,   KC_A,      KC_O, 
-		         KC_Y,       KC_V,           KC_W,           KC_D,       KC_X,          KC_Z,             KC_BSLS,           KC_J,          KC_H,       KC_MINS,   KC_DOT,   KC_QUOT, 
-       LCTL_T(KC_ESC),  TLL(_FUNCTION),     KC_NO,   TLL(_EXTEND), OSM(MOD_LSFT),    KC_BSPC,            KC_TAB,  MEH_T(KC_SPC),   TLL(_SYMNUM),       KC_SLSH,   KC_GRV,   RCTL_T(KC_ENT)
+		         KC_Q,            KC_C,            KC_L,           KC_M,       KC_K,                                               KC_B,           KC_F,          KC_U,  KC_COMM,   KC_SCLN,
+		         KC_I,            KC_S,    LALT_T(KC_R),   LGUI_T(KC_T),       KC_G,                                               KC_P,   RGUI_T(KC_N),  RALT_T(KC_E),   KC_A,      KC_O, 
+		         KC_Y,            KC_V,            KC_W,           KC_D,       KC_X,          KC_Z,             KC_BSLS,           KC_J,           KC_H,       KC_MINS,   KC_DOT,   KC_QUOT, 
+       LCTL_T(KC_ESC),  TLL(_FUNCTION),           KC_NO,   TLL(_EXTEND), OSM(MOD_LSFT),    KC_BSPC,              KC_TAB,  MEH_T(KC_SPC),   TLL(_SYMNUM),       KC_SLSH,   KC_GRV,   RCTL_T(KC_ENT)
 		),
 	[_EXTEND] = LAYOUT(
-			   KC_ESC,       KC_WBAK,       KC_FIND,       KC_WFWD,   KC_INS,                              KC_PGUP,  KC_HOME,     KC_UP,    KC_END,  KC_CAPS,
-		OSM(MOD_LALT), OSM(MOD_LGUI), OSM(MOD_LSFT), OSM(MOD_LCTL),  KC_RALT,                              KC_PGDN,  KC_LEFT,   KC_DOWN,   KC_RGHT,  KC_DEL,
-			  KC_UNDO,        KC_CUT,       KC_COPY,       KC_LGUI,  KC_PSTE,    KC_NO,           KC_PSCR, KC_RGUI/*?*/,  KC_BSPC,    KC_TAB,    KC_APP,  KC_LOCK,  // KC_LOCK useful for locking SHIFT to select stuff
-		      _______,       _______,   TG(_EXTEND),       _______,  _______,  _______,          _______,    _______,   _______,   _______,   _______, _______
+			   KC_ESC,       KC_WBAK,       KC_FIND,       KC_WFWD,   KC_INS,                                KC_PGUP,  KC_HOME,     KC_UP,    KC_END,  KC_CAPS,
+		OSM(MOD_LALT), OSM(MOD_LGUI), OSM(MOD_LSFT), OSM(MOD_LCTL),  KC_RALT,                                KC_PGDN,  KC_LEFT,   KC_DOWN,   KC_RGHT,  KC_DEL,
+			  KC_UNDO,        KC_CUT,       KC_COPY,       KC_PSTE,  KC_LGUI,    KC_NO,        KC_PSCR, /*?*/KC_RGUI,  KC_BSPC,    KC_TAB,    KC_APP,  KC_LOCK,  // KC_LOCK useful for locking SHIFT to select stuff
+		      _______,       _______,   TG(_EXTEND),       _______,  _______,  _______,          _______,    _______,   _______,  _______,   _______, _______
 	),
 	[_FUNCTION] = LAYOUT(
 			  KC_MUTE,       KC_VOLD,       KC_VOLU,       KC_MPLY,  KC_BRIU,                               KC_F12,    KC_F7,     KC_F8,    KC_F9,  C(KC_PLUS),
@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			   KC_EXLM,        KC_AT,       KC_HASH,       KC_COLN,  KC_SCLN,                                 KC_PEQL,    KC_P7,      KC_P8,    KC_P9,  KC_PPLS,
 			   KC_BSLS,      KC_PIPE,       KC_LPRN,       KC_LCBR,  KC_LBRC,                                 KC_PAST,    KC_P4,      KC_P5,    KC_P6,  KC_PMNS,
 			   KC_MINS,      KC_UNDS,       KC_RPRN,       KC_RCBR,  KC_RBRC,    KC_NO ,      TLL(_MOUSE),    KC_PCMM,    KC_P1,      KC_P2,    KC_P3,  KC_PSLS,
-		      _______,       _______,   TG(_SYMNUM),       _______,  _______,   _______,          _______,    _______,  _______,   KC_P0,  KC_PDOT,  RCTL_T(KC_PENT)
+		      _______,       _______,   TG(_SYMNUM),       _______,  _______,   _______,          _______,    _______,  _______,      KC_P0,  KC_PDOT,  RCTL_T(KC_PENT)
 	),
 	[_MOUSE] = LAYOUT(
 			   KC_ACL0,      KC_WH_L,       KC_MS_U,       KC_WH_R,  KC_WH_U,                               UC(0X2260),    KC_AMPR,      KC_GRV,    KC_TILD,  UC(0X00D7),
